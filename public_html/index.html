@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rechtsanwalt Rockenberg</title>
+        <link href="assets/css/styles.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/responsive.css" rel="stylesheet" type="text/css"/>
+        <script src="assets/js/lib/jquery.min.js"></script>     
+        <script src="assets/js/lib/jquery.fitvids.js"></script>
+        <script src="assets/js/lib/angularJS.js"></script>        
+        <script src="assets/js/lib/ngRoute.js"></script>    
+        <script src="assets/js/mainJS.js"></script>
+        <script src="assets/js/js.js"></script>
+            
+    </head>
+    <body ng-app="mainApp">
+        <div class="wrapper">
+            <!--<input type="text" ng-model="test"><br>
+            {{test}}-->
+            <div ng-include="'templates/header.html'"></div>
+
+	<article class="cf">
+            <div ng-view="view"></div>
+            <div ng-include="'templates/asideRight.html'"></div>
+	</article>
+	
+	<footer>
+            <p>&copy <a href="">peh-berlin.de</a></p>
+	</footer>
+	
+</div>
+    </body>
+</html>

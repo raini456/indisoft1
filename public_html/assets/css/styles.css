@@ -1,0 +1,199 @@
+/* Resets */
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+/*img { -ms-interpolation-mode: bicubic; }*/
+
+
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    zoom:1;
+}
+/*************** DEFINITION DER GRUNDELEMENTE ********************/
+body {
+    background: #e6e6e6 url(img/paper-bg.jpg) left top repeat fixed;	
+    color: #333;
+    font-family: myriad-pro-condensed, sans-serif;
+    /*font-size: 93.75%;*/
+    font-size:100%;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: myriad-pro-condensed, sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0 0 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 30px 0 1rem;
+}
+a{
+    color:white;
+}
+header{
+    padding:0.5rem 2rem;
+}
+embed, object, video, iframe{
+    max-width:100%;
+}
+#headerMainTagline{
+    font-size:2rem;        
+}
+
+.subContent h2,
+.subContent h3 {
+    font-family: myriad-pro, sans-serif;
+    font-weight: bold;
+} 
+
+.subContent h2 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0;
+}
+
+.subContent h3 {
+    color: #333;
+    font-size: 1rem;
+    margin: 1rem 0 0;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+ul {
+    margin-left: 1rem;
+    list-style:none;
+}
+ul li{
+    color:darkgray;
+}
+
+.wrapper {
+    background: #e6e6e6;
+    border: 1px solid #ccc; 
+    border-bottom: none;
+    margin: 48px auto 0;		
+    max-width: 1080px;
+    width:90%;
+    box-shadow: 0 0 10px whitesmoke;
+}
+
+header {
+    background: #255672;
+    color: #fff;
+}
+
+article {
+    background: transparent url(img/grafik2.png) 97.22222222222222% bottom no-repeat;
+    background-size:27.77777777777778% auto;
+}
+
+.mainContent {
+    background: #fff;
+    float: left;
+    padding: 48px 5%;
+    width:55.55555555555556%;
+}
+.subContent{
+    float: right;
+    padding: 48px 3%;
+    width: 27.77777777777778%;
+}
+footer {
+    background: #255672;
+    color: #fff;
+    clear: both;
+    padding: 15px 60px 1px;
+}
+
+
+/****************DEFINITION DER EINZELNEN ELEMENTE*********************/
+/****HEADER****/
+#logo{ 
+    float:left;
+    width:15%;     
+    margin:1.83856502242152% 6% 0 0;
+    height:auto;
+}
+.headerTagline {
+    float:  right;
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.4;
+    margin: 15px 5.55555556% 0 0;
+    width: 27,77777777777778%;
+}
+/************MAIN-SITE*************/
+#startPic{
+    height:auto;
+    max-width:100%;
+    float:left;
+    margin:0 2rem 1rem 0;
+}
+#headlineMain{
+    text-align:center;
+}
+#headerMainTagline{
+    font-size:3rem;
+    width:91.80790960451977%;
+    height:auto;
+}
+#headerMainTag{
+    font-size:2.6rem;
+}
+#subtitleMain{
+    font-size:120%;
+    text-align:center;
+}
+/****************ASIDE****************/
+.portrait {
+    border: 1px solid #ccc;
+    height:auto;
+    max-width: 100%;
+
+}
+/*Test background-size (bgs) */
+
+/* Beispiel 1
+header {
+        background: #078577 url(img/test-bgs.png) 50% 50% no-repeat; 
+        background-size: auto 100%;
+}*/
+
+/* Beispiel 2
+header {
+        background-size: 100% 100%;
+}
+
+ Beispiel 3
+header {
+        background-size: cover;
+}
+
+ Beispiel 4
+header {
+        background-size: contain;
+}*/
