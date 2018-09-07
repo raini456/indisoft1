@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
+To change this template file, choose Tools "kanzlei
 and open the template in the editor.
 -->
 <html>
@@ -12,6 +12,7 @@ and open the template in the editor.
         <link href="assets/css/styles.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css"/>
         <script src="assets/js/lib/jquery.min.js"></script>     
+        <script src="assets/js/lib/respond.js"></script>
         <script src="assets/js/lib/jquery.fitvids.js"></script>
         <script src="assets/js/lib/angularJS.js"></script>        
         <script src="assets/js/lib/ngRoute.js"></script>    
@@ -23,11 +24,11 @@ and open the template in the editor.
         <div class="wrapper">
             <!--<input type="text" ng-model="test"><br>
             {{test}}-->
-            <div ng-include="'templates/header.html'"></div>
+            <div ng-include="'kanzlei/header.html'"></div>
 
 	<article class="cf">
             <div ng-view="view"></div>
-            <div ng-include="'templates/asideRight.html'"></div>
+            <div ng-include="'kanzlei/asideRight.html'"></div>
 	</article>
 	
 	<footer>

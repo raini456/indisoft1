@@ -53,7 +53,7 @@ a{
     color:white;
 }
 header{
-    padding:0.2rem 2rem;
+    padding:0.5rem 2rem;
 }
 embed, object, video, iframe{
     max-width:100%;
@@ -84,24 +84,11 @@ p {
 }
 
 ul {
-    margin-left: .2rem;
+    margin-left: 1rem;
     list-style:none;
 }
 ul li{
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    background:#255672;
-    color: darkgray;
-    box-shadow: 0 0 4px black;    
-    text-align: center;
-}
-ul li a{
-    text-decoration:none;
-}
-ul li:hover {
-    background: lightslategray;
-    color:darkgreen;
-    transition: all .3s ease-in-out;
+    color:darkgray;
 }
 
 .wrapper {
@@ -128,11 +115,12 @@ article {
     background: #fff;
     float: left;
     padding: 48px 5%;
-    width:90%;
+    width:55.55555555555556%;
 }
 .subContent{
-    float: left;
-    padding: 48px 3%;    
+    float: right;
+    padding: 48px 3%;
+    width: 27.77777777777778%;
 }
 footer {
     background: #255672;
@@ -144,32 +132,19 @@ footer {
 
 /****************DEFINITION DER EINZELNEN ELEMENTE*********************/
 /****HEADER****/
-#logo{    
+#logo{ 
     float:left;
-    width:65%;     
-    margin:1.83856502242152% auto 0 20%;
+    width:15%;     
+    margin:1.83856502242152% 6% 0 0;
     height:auto;
 }
-.headerSubTagline {
+.headerTagline {
     float:  right;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-style: italic;
     line-height: 1.4;
-    margin: 0.5rem 2.5252526%;    
-}
-#aImpressum, #aDatenschutz{
-    float:left;
-    margin:0 2%;
-}
-#aImpressum:hover, #aDatenschutz:hover{
-    color:darkgreen;
-}
-#aDatenschutz{
-    float:right;
-}
-#imprDsv a{
-    color: #000;
-    text-decoration: none;
+    margin: 15px 5.55555556% 0 0;
+    width: 27,77777777777778%;
 }
 /************MAIN-SITE*************/
 #startPic{
@@ -178,21 +153,19 @@ footer {
     float:left;
     margin:0 2rem 1rem 0;
 }
-#headerMainTag{
-    font-size: 2.3rem;
-    text-shadow:0 0 5px darkblue;
+#headlineMain{
     text-align:center;
-}
-
-#headlineMainsite{
-    text-align:center;
-    font-size:1.7rem;
 }
 #headerMainTagline{
-    font-size:3rem;    
+    font-size:3rem;
+    width:91.80790960451977%;
     height:auto;
 }
-#subtitleMainsite{
+#headerMainTag{
+    font-size:2.6rem;
+    text-shadow:0 0 5px lightgreen;
+}
+#subtitleMain{
     font-size:120%;
     text-align:center;
 }
@@ -202,20 +175,6 @@ footer {
     height:auto;
     max-width: 100%;
 
-}
-#article1Kanzlei, #articleDatenschutz, #hauptfeld{
-    padding:0 2%;
-    background:whitesmoke;
-}
-#hauptfeld{
-    padding:3% 4%;
-}
-#article1Kanzlei a{
-      color: #070e6d;      
-}
-#startTextKanzlei, #startTextKontakt{
-    margin-top:15%;
-    text-align: center;
 }
 /*Test background-size (bgs) */
 

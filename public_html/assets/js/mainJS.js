@@ -5,7 +5,7 @@ angular.element(function () {
 app.config(['$routeProvider', function ($routeProvider) {
         $routeProvider
                 .when('/', {
-                    templateUrl: 'templates/main.html',
+                    templateUrl: 'kanzlei/main.html',
                     controller: 'indexCtrl'
                 })
                 .when('/home', {
@@ -52,8 +52,8 @@ app.config(['$routeProvider', function ($routeProvider) {
                     templateUrl: 'html/fall.html',
                     controller: 'fallCtrl'
                 })
-                .when("/kontakt", {
-                    templateUrl: 'html/email.html',
+                .when("/email", {
+                    templateUrl: 'kanzlei/email.html',
                     controller: 'emailCtrl'
                 })
                 .when("/anfahrt", {
@@ -61,11 +61,11 @@ app.config(['$routeProvider', function ($routeProvider) {
                     controller: 'anfahrtCtrl'
                 })
                 .when("/impressum", {
-                    templateUrl: 'html/impressum.html',
+                    templateUrl: 'kanzlei/impressum.html',
                     controller: 'impressumCtrl'
                 })
                 .when("/datenschutz", {
-                    templateUrl: 'html/datenschutz.html',
+                    templateUrl: 'kanzlei/datenschutz.html',
                     controller: 'datenschutzCtrl'
                 })
                 .otherwise({
