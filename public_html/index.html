@@ -25,16 +25,12 @@ and open the template in the editor.
             <!--<input type="text" ng-model="test"><br>
             {{test}}-->
             <div ng-include="'kanzlei/header.html'"></div>
-
-	<article class="cf">
-            <div ng-view="view"></div>
+            <div ng-include="'kanzlei/asideLeft.html'"></div>
+            <article class="cf">
+                <div ng-view id="view"></div>                
+            </article>
             <div ng-include="'kanzlei/asideRight.html'"></div>
-	</article>
-	
-	<footer>
-            <p>&copy <a href="">peh-berlin.de</a></p>
-	</footer>
-	
+            <div ng-include="'kanzlei/footer.html'"></div>	
 </div>
     </body>
 </html>

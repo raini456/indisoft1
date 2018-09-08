@@ -67,7 +67,9 @@ embed, object, video, iframe{
     font-family: myriad-pro, sans-serif;
     font-weight: bold;
 } 
-
+#view{
+   background: whitesmoke; 
+}
 .subContent h2 {
     font-size: 1.2rem;
     margin: 1rem 0 0;
@@ -82,7 +84,10 @@ embed, object, video, iframe{
 p {
     margin: 0 0 1rem;
 }
-
+nav{
+   width:100%;
+   margin:0 0 3% 0; 
+}
 ul {
     margin-left: .2rem;
     list-style:none;
@@ -94,6 +99,7 @@ ul li{
     color: darkgray;
     box-shadow: 0 0 4px black;    
     text-align: center;
+    padding: 3.5% 0;
 }
 ul li a{
     text-decoration:none;
@@ -132,13 +138,15 @@ article {
 }
 .subContent{
     float: left;
-    padding: 48px 3%;    
+    padding: 4% 3%;    
+    width: 94%;
 }
 footer {
     background: #255672;
     color: #fff;
     clear: both;
     padding: 15px 60px 1px;
+    text-align: center;
 }
 
 
@@ -157,6 +165,11 @@ footer {
     line-height: 1.4;
     margin: 0.5rem 2.5252526%;    
 }
+#imprDsv{
+    width:100%;
+    height:1.5rem;
+    background:#e8e8e8;
+}
 #aImpressum, #aDatenschutz{
     float:left;
     margin:0 2%;
@@ -167,8 +180,9 @@ footer {
 #aDatenschutz{
     float:right;
 }
-#imprDsv a{
-    color: #000;
+#imprDsv a, #articleDatenschutz a, #hauptfeld a{
+    color: blue;
+    font-style: italic;
     text-decoration: none;
 }
 /************MAIN-SITE*************/
@@ -198,25 +212,53 @@ footer {
 }
 /****************ASIDE****************/
 .portrait {
-    border: 1px solid #ccc;
     height:auto;
     max-width: 100%;
-
+    margin:0 4.57506361323155%;;
 }
-#article1Kanzlei, #articleDatenschutz, #hauptfeld{
-    padding:0 2%;
+/**************UNTERSEITEN******************/
+#article1Kanzlei, #articleDatenschutz, #hauptfeld, #articleImpressum{
+    padding:1% 2%;
     background:whitesmoke;
+}section#articleImpressum a, section#articleDatenschutz a{
+    color: darkblue;
 }
 #hauptfeld{
     padding:3% 4%;
 }
-#article1Kanzlei a{
-      color: #070e6d;      
+section#gebiete{
+    padding: 2% 0;
+    text-align:center;
 }
-#startTextKanzlei, #startTextKontakt{
-    margin-top:15%;
-    text-align: center;
+article.articleGebiete{
+    font-size: 1.3rem;
+    border: 1px solid #b0b1b5;
+    cursor: pointer;
+    border-radius: 9%;
+    width: 50%;
+    margin: 1% auto;
+    background: #e6e3e3;
+    box-shadow: 0 0 5px #255672;
 }
+article#familienrecht:hover ~ article#familienrecht div{
+    display:block;
+}
+article.articleGebiete div{
+    font-size:1rem;
+    display:none;
+}
+input, textarea, select, #dataCheck, #inputSubmit{
+    margin: 2%;
+    padding: 4%;
+}
+#dataCheck{
+    width:1.5rem;
+    height:1.5rem;
+}
+#inputSubmit{
+    font-size:1.3rem;
+}
+
 /*Test background-size (bgs) */
 
 /* Beispiel 1

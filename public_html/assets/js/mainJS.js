@@ -12,52 +12,20 @@ app.config(['$routeProvider', function ($routeProvider) {
                     templateUrl: 'html/main.html',
                     controller: 'mainCtrl'
                 })
-                .when("/schwerpunkte", {
-                    templateUrl: 'html/taetigkeitsschwerpunkte.html',
-                    controller: 'schwerpunkteCtrl'
+                .when("/gebiete", {
+                    templateUrl: 'kanzlei/gebiete.html',
+                    controller: 'gebieteCtrl'
                 })
-                .when("/leistungen", {
-                    templateUrl: 'html/leistungen.html',
-                    controller: 'leistungenCtrl'
-                })
-                .when("/miete", {
-                    templateUrl: 'html/mietrecht.html',
-                    controller: 'mietrechtCtrl'
-                })
-                .when("/familie", {
-                    templateUrl: 'html/familienrecht.html',
-                    controller: 'familienrechtCtrl'
-                })
-                .when("/verkehr", {
-                    templateUrl: 'html/verkehrsrecht.html',
-                    controller: 'verkehrsrechtCtrl'
-                })/**/
-                .when("/taetigkeitsschwerpunkte_weitere", {
-                    templateUrl: 'html/taetigkeitsschwerpunkte_weitere.html',
-                    controller: 'weitereCtrl'
-                })
-                .when("/team", {
-                    templateUrl: 'html/team.html',
-                    controller: 'teamCtrl'
-                })
-                .when("/rechtsprechung", {
-                    templateUrl: 'html/rechtsprechung.html',
-                    controller: 'rechtsprechungCtrl'
-                })
-                .when("/email", {
-                    templateUrl: 'html/email.html',
-                    controller: 'emailCtrl'
-                })
-                .when("/fall", {
-                    templateUrl: 'html/fall.html',
-                    controller: 'fallCtrl'
-                })
+                .when("/person", {
+                    templateUrl: 'kanzlei/person.html',
+                    controller: 'personCtrl'
+                })                
                 .when("/email", {
                     templateUrl: 'kanzlei/email.html',
                     controller: 'emailCtrl'
                 })
                 .when("/anfahrt", {
-                    templateUrl: 'html/anfahrt.html',
+                    templateUrl: 'kanzlei/anfahrt.html',
                     controller: 'anfahrtCtrl'
                 })
                 .when("/impressum", {
@@ -116,85 +84,33 @@ app.controller('asideLeft', function ($scope) {
         }
     });   
 });
-app.controller('sliderCtrl', function () {        
-    var no=0;
-    $('li').click(function(){
-        $('li').removeClass('active');
-        $(this).addClass('active');
-        no=$(this).attr('data-slide-to');        
-        $('.img0').css({
-            backgroundImage:'url(assets/images/team'+no+'.jpg)'
-        }).fadeIn('slow');
-    });
-    $('.carousel-control-next').click(function(){
-        no++;        
-        no<6?no=no:no=0;
-        $('.img0').css({
-            backgroundImage:'url(assets/images/team'+no+'.jpg)'
-        }).fadeIn('slow');
-        $('li').removeClass('active');
-        $('#slidePic'+ no).addClass('active');      
-    });
-    $('.carousel-control-prev').click(function(){
-        no--;        
-        no>-1?no=no:no=5;
-        $('.img0').css({
-            backgroundImage:'url(assets/images/team'+no+'.jpg)'
-        }).fadeIn('slow');
-        $('li').removeClass('active');
-        $('#slidePic'+ no).addClass('active');     
-    });
-    
-});
-app.controller('rechtsprechungCtrl', function ($scope) {
-    $scope.openFall = function () {
-        $('#fall').slideToggle(200);
-        $('#neuestes').slideUp(200);
-        $('#praxis').slideUp(200);
 
-    };
-    $scope.openNeuestes = function () {
-        $('#neuestes').slideToggle(200);
-        $('#fall').slideUp(200);
-        $('#praxis').slideUp(200);
-
-    };
-    $scope.openPraxis = function () {
-        $('#praxis').slideToggle(200);
-        $('#fall').slideUp(200);
-        $('#neuestes').slideUp(200);
-    };
-});
-app.controller('indexCtrl', function ($scope) {
-
-    $scope.siteWidth = window.innerWidth;
-
-    //$scope.siteWidth = window.innerWidth;               
-});
-app.controller('asideLeftCtrl', function ($scope) {
-    $('#liKanzlei').mouseover(function () {
-        $('#ulKanzlei').slideDown('slow');
+app.controller('gebieteCtrl', function () {
+    $('.familienrecht').click(function(){
+        $('#familienrecht').slideDown('slow');
+        $('#arbeitsrecht, #erbrecht, #verkehrsrecht, #mietrecht, #sozialrecht').slideUp('slow');
     });
-    $('#liHome, #liIhrRecht').mouseover(function () {
-        $('#ulKanzlei').slideUp('slow');
+    $('.arbeitsrecht').click(function(){
+        $('#arbeitsrecht').slideDown('slow');
+        $('#familienrecht, #erbrecht, #verkehrsrecht, #mietrecht, #sozialrecht').slideUp('slow');
     });
-    $('.liUlKanzlei').click(function () {
-        $('#ulKanzlei').slideUp('slow');
+    $('.erbrecht').click(function(){
+        $('#erbrecht').slideDown('slow');
+        $('#familienrecht, #arbeitsrecht, #verkehrsrecht, #mietrecht, #sozialrecht').slideUp('slow');
+    });
+    $('.verkehrsrecht').click(function(){
+        $('#verkehrsrecht').slideDown('slow');
+        $('#arbeitsrecht, #erbrecht, #familienrecht, #mietrecht, #sozialrecht').slideUp('slow');
+    });
+    $('.mietrecht').click(function(){
+        $('#mietrecht').slideDown('slow');
+        $('#verkehrsrecht, #arbeitsrecht, #erbrecht, #familienrecht, #sozialrecht').slideUp('slow');
+    });
+    $('.sozialrecht').click(function(){
+        $('#sozialrecht').slideDown('slow');
+        $('#mietrecht, #verkehrsrecht, #arbeitsrecht, #erbrecht, #familienrecht').slideUp('slow');
     });
 });
-app.controller('mainCtrl', function ($scope) {
-    
-});
-app.controller('schwerpunkteCtrl', function ($scope) {});
-app.controller('familienrechtCtrl', function ($scope) {});
-app.controller('mietrechtCtrl', function ($scope) {});
-app.controller('verkehrsrechtCtrl', function () {
-    $('#btnTest').click(function(){
-        console.log("HIH");
-    });
-});
-
-app.controller('weitereCtrl', function ($scope) {});
 app.controller('emailCtrl', function ($scope) {
     $('#dataCheck').change(function () {
         if (document.getElementById('dataCheck').checked == true) {
